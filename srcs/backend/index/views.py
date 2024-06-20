@@ -15,3 +15,6 @@ def index(request):
 		except jwt.InvalidTokenError:
 			return render(request, 'index/lobby.html', status=401)
 	return render(request, 'index/lobby.html')
+
+# def index(request):
+# 	return render(request, 'index/index.html')

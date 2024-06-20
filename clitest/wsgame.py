@@ -2,15 +2,17 @@ import json
 import argparse
 import websocket
 from websocket import create_connection
-from websockets.exceptions import WebSocketException
+# from websockets.exceptions import WebSocketException
 import ssl
 import urllib3
 import requests
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-base_uri = "https://10.12.1.3:4243/"
-uri_template = "wss://10.12.1.3:4243/ws/{game_id}/"
+# base_uri = "https://10.12.1.3:4243/"
+base_uri = "https://localhost:4243/"
+# uri_template = "wss://10.12.1.3:4243/ws/{game_id}/"
+uri_template = "wss://localhost:4243/ws/{game_id}/"
 
 def get_cookie():
     session = requests.Session()
